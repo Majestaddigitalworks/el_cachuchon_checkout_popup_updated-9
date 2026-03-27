@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Cachuchón | Premium Fitted Hat Store</title>
+  <meta
+    name="description"
+    content="El Cachuchón premium fitted hat storefront concept with size-first shopping, sold-out states, and easy product browsing."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+  body {
+    position: relative;
+    background-color: #f4f1eb;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("assets/img/brand/logo.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: min(70vw, 900px);
+    opacity: 0.22;
+    filter: brightness(1.28) contrast(1.03);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (max-width: 600px) {
+    body::before {
+      background-size: 88vw;
+      opacity: 0.12;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="size-entry" id="sizeEntry">
+    <div class="size-entry__panel">
+      <div class="size-entry__brand">
+        <img src="assets/img/brand/wordmark-cutout.png" alt="El Cachuchón" />
+      </div>
+
+      <p class="eyebrow">Premium fitted</p>
+      <h1>Welcome to El Cachuchón</h1>
+      <p class="lead">
+        Choose your fitted size first or browse the full collection.
+      </p>
+
+      <div class="entry-actions">
+        <button class="btn btn-solid" id="openSizePicker">Shop by Size</button>
+        <button class="btn btn-outline" id="browseAllBtn">Browse All Hats</button>
+      </div>
+
+      <div class="entry-size-picker hidden" id="entrySizePicker">
+        <p class="mini-label">Select your fitted size</p>
+        <div class="size-chip-grid" id="entrySizeGrid"></div>
+      </div>
+    </div>
+  </div>
+
+  <header class="topbar">
+  <div class="ticker">Free standard shipping on orders over $100</div>
+</header>
+
+<header class="site-header" id="top">
+  <div class="container nav-wrap">
+    <div class="lang-switcher" aria-label="Language switcher">
+      <button type="button" class="lang-btn active" data-lang="en">EN</button>
+      <button type="button" class="lang-btn" data-lang="es">ES</button>
+    </div>
+
+    <button class="menu-toggle" id="mobileMenuToggle" aria-label="Open navigation">☰</button>
+
+    <a class="brand" href="#top">
+      <img src="assets/img/brand/footer-mark.png" alt="El Cachuchón mark" />
+      <span>El Cachuchón</span>
+    </a>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="#shop">Shop</a>
+      <a href="#size-guide">Size Guide</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="sizeFilterBtn" type="button">
+        Size: <span id="currentSizeLabel">All</span>
+      </button>
+      <button class="icon-btn" id="openCartBtn" type="button">
+        Cart <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Luxury streetwear</p>
+          <h2>Your grind. Your pride. Your crown.</h2>
+          <p class="lead">Premium fitted hats with multiple angles and easy size-first shopping.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-solid" href="#shop">Shop the Collection</a>
+            <a class="btn btn-outline" href="#about">About the Brand</a>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <img
+            src="assets/img/brand/wordmark-cutout.png"
+            alt="El Cachuchón wordmark"
+            class="hero-wordmark"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-filter">
+      <div class="container quick-filter__wrap">
+        <div>
+          <p class="eyebrow">Shop faster</p>
+          <h3>Choose your fitted size</h3>
+        </div>
+        <div class="size-chip-grid" id="headerSizeGrid"></div>
+      </div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="container section-heading">
+        <div>
+          <p class="eyebrow">Collection</p>
+          <h2>Hat Store</h2>
+        </div>
+
+        <div class="shop-meta-actions">
+          <span class="muted" id="resultsLabel">Showing all hats</span>
+          <button class="btn btn-ghost" id="clearSizeBtn" type="button">Clear Size Filter</button>
+        </div>
+      </div>
+
+      <div class="container product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="size-guide-section" id="size-guide">
+      <div class="container size-guide-grid">
+        <div>
+          <p class="eyebrow">Size guide</p>
+          <h2>Find the right fitted size</h2>
+          <p class="lead">
+            Use a flexible tape measure around your head where the cap sits.
+            Match that measurement to the fitted size chart below.
+          </p>
+
+          <div class="size-table-wrap">
+            <table class="size-table">
+              <thead>
+                <tr>
+                  <th>Cap size</th>
+                  <th>IN</th>
+                  <th>CM</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>6 7/8</td><td>21 5/8</td><td>54.9</td></tr>
+                <tr><td>7</td><td>22</td><td>55.8</td></tr>
+                <tr><td>7 1/8</td><td>22 3/8</td><td>56.8</td></tr>
+                <tr><td>7 1/4</td><td>22 3/4</td><td>57.7</td></tr>
+                <tr><td>7 3/8</td><td>23 1/8</td><td>58.7</td></tr>
+                <tr><td>7 1/2</td><td>23 1/2</td><td>59.6</td></tr>
+                <tr><td>7 5/8</td><td>23 7/8</td><td>60.6</td></tr>
+                <tr><td>7 3/4</td><td>24 1/4</td><td>61.5</td></tr>
+                <tr><td>7 7/8</td><td>24 5/8</td><td>62.5</td></tr>
+                <tr><td>8</td><td>25</td><td>63.5</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="size-guide-card">
+          <img src="assets/img/brand/size-chart-reference.png" alt="Size chart reference" />
+          <div class="size-guide-note">Use this chart to find your fitted size.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="container about-grid">
+        <div class="about-card about-branding">
+          <img src="assets/img/brand/IMG_2018.PNG" alt="El Cachuchón brand statement reference" />
+        </div>
+
+        <div class="about-card about-copy">
+          <p class="eyebrow">
+            You’re not just wearing a hat
+            <span style="filter: grayscale(100%); font-size: 48px;">🧢</span>
+            you’re wearing your grind, your pride, and your crown.
+            <span style="display: inline-block; font-size: 48px; color: #000000;">🤴🏻</span>
+            - <strong>El Cachuchon</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-card">
+        <img src="assets/img/brand/footer-mark.png" alt="Brand mark" />
+        <p class="eyebrow">Stay in the loop</p>
+        <h2>Need help, info, or just want launch updates, coupons, and discounts?</h2>
+        <p class="lead">Email us or join the mailing list.</p>
+
+        <form id="generalSignupForm" class="inline-form">
+          <input type="email" id="generalEmail" placeholder="Enter your email" required />
+          <button type="submit" class="btn btn-solid">Join the Mailing List</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+ <footer class="site-footer">
+  <div class="container footer-wrap">
+    <div>
+      <strong>Hasta la próxima plebes!</strong>
+      <p>Copyright © 2026 elcachuchon.com - All Rights Reserved.</p>
+    </div>
+    <a href="#top" id="backToTopBtn" class="back-to-top-link">Back to top ↑</a>
+  </div>
+</footer>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Shopping Cart</h3>
+      <button class="icon-btn" id="closeCartBtn" type="button">✕</button>
+    </div>
+
+    <div class="cart-body" id="cartItems"></div>
+
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total</span>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+      <p class="microcopy">
+        Secure checkout. Your order confirmation will appear right after payment.
+      </p>
+      <button class="btn btn-solid btn-block" id="checkoutBtn" type="button">Checkout</button>
+    </div>
+  </aside>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <div class="modal" id="productModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+
+    <div class="modal-dialog modal-dialog--wide">
+      <button class="modal-close" data-close-modal type="button">✕</button>
+
+      <div class="product-modal-grid">
+        <div>
+          <img id="modalMainImage" class="modal-main-image" src="" alt="" />
+          <div class="modal-thumb-row" id="modalThumbs"></div>
+        </div>
+
+        <div class="modal-content">
+          <p class="eyebrow" id="modalBadge">Featured fitted</p>
+          <h3 id="modalTitle"></h3>
+          <p class="muted" id="modalFileName" style="display:none;"></p>
+
+          <div class="price-row">
+            <span class="price" id="modalPrice"></span>
+            <span class="stock-pill" id="modalStock"></span>
+          </div>
+
+          <p class="modal-description" id="modalDescription"></p>
+
+          <div class="option-block">
+            <span class="option-label">Choose size</span>
+            <div class="size-chip-grid" id="modalSizes"></div>
+          </div>
+
+          <div class="option-block">
+            <span class="option-label">Hat details</span>
+            <div class="detail-grid" id="modalDetails"></div>
+          </div>
+
+          <div class="modal-actions" id="modalActions"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="thankYouModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-thanks></div>
+
+    <div class="modal-dialog thankyou-dialog">
+      <button class="modal-close" data-close-thanks type="button">✕</button>
+
+      <div class="thankyou-art-wrap">
+        <img
+          src="assets/img/brand/checkout-thanks.jpg"
+          alt="Hasta la próxima plebes El Cachuchón artwork"
+          class="thankyou-art"
+        />
+      </div>
+
+      <p class="eyebrow">Payment received</p>
+      <h3>Gracias por tu compra.</h3>
+      <p>Your payment went through and your order is being processed.</p>
+
+      <div class="thankyou-actions">
+        <button class="btn btn-solid" data-close-thanks type="button">Keep Browsing</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="assets/js/store-config.js"></script>
+  <script src="assets/js/products-data.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
