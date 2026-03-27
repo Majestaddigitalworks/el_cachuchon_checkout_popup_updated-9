@@ -19,37 +19,30 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <style>
-  body {
-    position: relative;
-    background-color: #f4f1eb;
-  }
-
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image: url("assets/img/brand/logo.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: min(70vw, 900px);
-    opacity: 0.22;
-    filter: brightness(1.28) contrast(1.03);
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  body > * {
-    position: relative;
-    z-index: 1;
-  }
-
-  @media (max-width: 600px) {
-    body::before {
-      background-size: 88vw;
-      opacity: 0.12;
+    body {
+      position: relative;
+      background-color: #f4f1eb;
     }
-  }
-</style>
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url("assets/img/brand/logo.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: min(70vw, 900px);
+      opacity: 0.22;
+      filter: brightness(1.28) contrast(1.03);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body > * {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
 </head>
 <body>
   <div class="size-entry" id="sizeEntry">
@@ -77,40 +70,35 @@
   </div>
 
   <header class="topbar">
-  <div class="ticker">Free standard shipping on orders over $100</div>
-</header>
+    <div class="ticker">Free standard shipping on orders over $100</div>
+  </header>
 
-<header class="site-header" id="top">
-  <div class="container nav-wrap">
-    <div class="lang-switcher" aria-label="Language switcher">
-      <button type="button" class="lang-btn active" data-lang="en">EN</button>
-      <button type="button" class="lang-btn" data-lang="es">ES</button>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <button class="menu-toggle" id="mobileMenuToggle" aria-label="Open navigation">☰</button>
+
+      <a class="brand" href="#top">
+        <img src="assets/img/brand/footer-mark.png" alt="El Cachuchón mark" />
+        <span>El Cachuchón</span>
+      </a>
+
+      <nav class="site-nav" id="siteNav">
+        <a href="#shop">Shop</a>
+        <a href="#size-guide">Size Guide</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="sizeFilterBtn" type="button">
+          Size: <span id="currentSizeLabel">All</span>
+        </button>
+        <button class="icon-btn" id="openCartBtn" type="button">
+          Cart <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
     </div>
-
-    <button class="menu-toggle" id="mobileMenuToggle" aria-label="Open navigation">☰</button>
-
-    <a class="brand" href="#top">
-      <img src="assets/img/brand/footer-mark.png" alt="El Cachuchón mark" />
-      <span>El Cachuchón</span>
-    </a>
-
-    <nav class="site-nav" id="siteNav">
-      <a href="#shop">Shop</a>
-      <a href="#size-guide">Size Guide</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="nav-actions">
-      <button class="icon-btn" id="sizeFilterBtn" type="button">
-        Size: <span id="currentSizeLabel">All</span>
-      </button>
-      <button class="icon-btn" id="openCartBtn" type="button">
-        Cart <span class="cart-count" id="cartCount">0</span>
-      </button>
-    </div>
-  </div>
-</header>
+  </header>
 
   <main>
     <section class="hero">
@@ -239,15 +227,15 @@
     </section>
   </main>
 
- <footer class="site-footer">
-  <div class="container footer-wrap">
-    <div>
-      <strong>Hasta la próxima plebes!</strong>
-      <p>Copyright © 2026 elcachuchon.com - All Rights Reserved.</p>
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div>
+        <strong>Hasta la próxima plebes!</strong>
+        <p>Copyright © 2026 elcachuchon.com - All Rights Reserved.</p>
+      </div>
+      <a href="#top">Back to top ↑</a>
     </div>
-    <a href="#top" id="backToTopBtn" class="back-to-top-link">Back to top ↑</a>
-  </div>
-</footer>
+  </footer>
 
   <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
     <div class="cart-header">
