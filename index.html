@@ -42,6 +42,13 @@
       position: relative;
       z-index: 1;
     }
+
+    @media (max-width: 600px) {
+      body::before {
+        background-size: 88vw;
+        opacity: 0.12;
+      }
+    }
   </style>
 </head>
 <body>
@@ -75,6 +82,11 @@
 
   <header class="site-header" id="top">
     <div class="container nav-wrap">
+      <div class="lang-switcher" aria-label="Language switcher">
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+      </div>
+
       <button class="menu-toggle" id="mobileMenuToggle" aria-label="Open navigation">☰</button>
 
       <a class="brand" href="#top">
@@ -233,7 +245,7 @@
         <strong>Hasta la próxima plebes!</strong>
         <p>Copyright © 2026 elcachuchon.com - All Rights Reserved.</p>
       </div>
-      <a href="#top">Back to top ↑</a>
+      <a href="#top" id="backToTopBtn" class="back-to-top-link">Back to top ↑</a>
     </div>
   </footer>
 
