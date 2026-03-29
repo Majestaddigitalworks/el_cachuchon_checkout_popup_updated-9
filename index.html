@@ -82,9 +82,20 @@
 
   <header class="site-header" id="top">
     <div class="container nav-wrap">
-      <div class="lang-switcher" aria-label="Language switcher">
-        <button type="button" class="lang-btn active" data-lang="en">EN</button>
-        <button type="button" class="lang-btn" data-lang="es">ES</button>
+      <div class="lang-switcher" aria-label="Language options">
+        <button type="button" class="lang-toggle-btn" id="languageToggleBtn">
+          Language Options
+        </button>
+
+        <div class="lang-dropdown hidden" id="languageDropdown">
+          <button type="button" class="lang-dropdown-item" data-lang="en">English</button>
+          <button type="button" class="lang-dropdown-item" data-lang="es">Español</button>
+          <button type="button" class="lang-dropdown-item" data-lang="tl">Filipino</button>
+          <button type="button" class="lang-dropdown-item" data-lang="ja">日本語</button>
+          <button type="button" class="lang-dropdown-item" data-lang="zh">中文</button>
+          <button type="button" class="lang-dropdown-item" data-lang="vi">Tiếng Việt</button>
+          <button type="button" class="lang-dropdown-item" data-lang="ko">한국어</button>
+        </div>
       </div>
 
       <button class="menu-toggle" id="mobileMenuToggle" aria-label="Open navigation">☰</button>
