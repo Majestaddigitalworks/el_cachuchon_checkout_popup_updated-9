@@ -672,3 +672,393 @@ setSizeFilter('All');
 renderCart();
 setupEntryExperience();
 setupGlobalEvents();
+const TRANSLATIONS = {
+  en: {
+    topbar: 'Free standard shipping on orders over $100',
+    nav: ['Shop', 'Size Guide', 'About', 'Contact'],
+    heroEyebrow: 'Luxury streetwear',
+    heroTitle: 'Your grind. Your pride. Your crown.',
+    heroLead: 'Premium fitted hats with multiple angles and easy size-first shopping.',
+    heroButtons: ['Shop the Collection', 'About the Brand'],
+    quickEyebrow: 'Shop faster',
+    quickTitle: 'Choose your fitted size',
+    sizeGuideEyebrow: 'Size guide',
+    sizeGuideTitle: 'Find the right fitted size',
+    sizeGuideLead: 'Use a flexible tape measure around your head where the cap sits. Match that measurement to the fitted size chart below.',
+    sizeGuideNote: 'Use this chart to find your fitted size.',
+    contactEyebrow: 'Stay in the loop',
+    contactTitle: 'Need help, info, or just want launch updates, coupons, and discounts?',
+    contactLead: 'Email us or join the mailing list.',
+    contactButton: 'Join the Mailing List',
+    footerTitle: 'Hasta la próxima plebes!',
+    footerBackTop: 'Back to top ↑',
+    entryTitle: 'Welcome to El Cachuchón',
+    entryLead: 'Choose your fitted size first or browse the full collection.',
+    entryShopBySize: 'Shop by Size',
+    entryBrowseAll: 'Browse All Hats',
+    entryMiniLabel: 'Select your fitted size',
+    shopHeading: 'Hat Store',
+    clearSize: 'Clear Size Filter',
+    sizeGuideTable: ['Cap size', 'IN', 'CM'],
+    paymentReceived: 'Payment received',
+    thankYouTitle: 'Gracias por tu compra.',
+    thankYouLead: 'Your payment went through and your order is being processed.',
+    keepBrowsing: 'Keep Browsing',
+    cartTitle: 'Shopping Cart',
+    cartTotal: 'Total',
+    checkout: 'Checkout'
+  },
+
+  es: {
+    topbar: 'Envío estándar gratis en pedidos de más de $100',
+    nav: ['Tienda', 'Guía de Tallas', 'Nosotros', 'Contacto'],
+    heroEyebrow: 'Streetwear de lujo',
+    heroTitle: 'Tu esfuerzo. Tu orgullo. Tu corona.',
+    heroLead: 'Gorras fitted premium con múltiples ángulos y compra fácil por talla.',
+    heroButtons: ['Comprar la Colección', 'Sobre la Marca'],
+    quickEyebrow: 'Compra más rápido',
+    quickTitle: 'Elige tu talla fitted',
+    sizeGuideEyebrow: 'Guía de tallas',
+    sizeGuideTitle: 'Encuentra la talla fitted correcta',
+    sizeGuideLead: 'Usa una cinta flexible alrededor de tu cabeza donde se acomoda la gorra. Luego compárala con la tabla de tallas.',
+    sizeGuideNote: 'Usa esta tabla para encontrar tu talla fitted.',
+    contactEyebrow: 'Mantente al tanto',
+    contactTitle: '¿Necesitas ayuda, información o quieres actualizaciones, cupones y descuentos?',
+    contactLead: 'Escríbenos o únete a la lista de correos.',
+    contactButton: 'Únete a la lista',
+    footerTitle: '¡Hasta la próxima plebes!',
+    footerBackTop: 'Volver arriba ↑',
+    entryTitle: 'Bienvenido a El Cachuchón',
+    entryLead: 'Elige primero tu talla fitted o navega toda la colección.',
+    entryShopBySize: 'Comprar por talla',
+    entryBrowseAll: 'Ver todas las gorras',
+    entryMiniLabel: 'Selecciona tu talla fitted',
+    shopHeading: 'Tienda de Gorras',
+    clearSize: 'Quitar filtro de talla',
+    sizeGuideTable: ['Talla', 'PULG', 'CM'],
+    paymentReceived: 'Pago recibido',
+    thankYouTitle: 'Gracias por tu compra.',
+    thankYouLead: 'Tu pago fue procesado y tu orden está siendo preparada.',
+    keepBrowsing: 'Seguir viendo',
+    cartTitle: 'Carrito de compras',
+    cartTotal: 'Total',
+    checkout: 'Pagar'
+  },
+
+  tl: {
+    topbar: 'Libreng standard shipping sa orders na lampas $100',
+    nav: ['Shop', 'Size Guide', 'About', 'Contact'],
+    heroEyebrow: 'Luxury streetwear',
+    heroTitle: 'Ang sipag mo. Ang dangal mo. Ang korona mo.',
+    heroLead: 'Premium fitted hats na may maraming anggulo at madaling size-first shopping.',
+    heroButtons: ['Bilhin ang Collection', 'Tungkol sa Brand'],
+    quickEyebrow: 'Mas mabilis mamili',
+    quickTitle: 'Piliin ang fitted size mo',
+    sizeGuideEyebrow: 'Gabay sa sukat',
+    sizeGuideTitle: 'Hanapin ang tamang fitted size',
+    sizeGuideLead: 'Gumamit ng flexible tape measure sa palibot ng ulo kung saan nakaupo ang cap. Itapat ito sa size chart sa ibaba.',
+    sizeGuideNote: 'Gamitin ang chart na ito para mahanap ang fitted size mo.',
+    contactEyebrow: 'Manatiling updated',
+    contactTitle: 'Kailangan mo ba ng tulong, impormasyon, o gusto mo ng updates, coupons, at discounts?',
+    contactLead: 'Mag-email sa amin o sumali sa mailing list.',
+    contactButton: 'Sumali sa Mailing List',
+    footerTitle: 'Hanggang sa muli, plebes!',
+    footerBackTop: 'Bumalik sa taas ↑',
+    entryTitle: 'Maligayang pagdating sa El Cachuchón',
+    entryLead: 'Piliin muna ang fitted size mo o tingnan ang buong collection.',
+    entryShopBySize: 'Mamili ayon sa size',
+    entryBrowseAll: 'Tingnan lahat ng hats',
+    entryMiniLabel: 'Piliin ang fitted size mo',
+    shopHeading: 'Hat Store',
+    clearSize: 'Alisin ang size filter',
+    sizeGuideTable: ['Sukat', 'IN', 'CM'],
+    paymentReceived: 'Natanggap ang bayad',
+    thankYouTitle: 'Salamat sa pagbili.',
+    thankYouLead: 'Pumasok na ang bayad mo at pinoproseso na ang order mo.',
+    keepBrowsing: 'Magpatuloy sa pagtingin',
+    cartTitle: 'Shopping Cart',
+    cartTotal: 'Kabuuan',
+    checkout: 'Checkout'
+  },
+
+  ja: {
+    topbar: '$100以上のご注文で通常配送無料',
+    nav: ['ショップ', 'サイズガイド', 'ブランド紹介', 'お問い合わせ'],
+    heroEyebrow: 'ラグジュアリーストリートウェア',
+    heroTitle: 'あなたの努力。あなたの誇り。あなたの王冠。',
+    heroLead: '多角度画像とサイズ優先ショッピングを備えたプレミアム fitted キャップ。',
+    heroButtons: ['コレクションを見る', 'ブランドについて'],
+    quickEyebrow: 'もっと早く探す',
+    quickTitle: 'fitted サイズを選ぶ',
+    sizeGuideEyebrow: 'サイズガイド',
+    sizeGuideTitle: 'ぴったりの fitted サイズを探す',
+    sizeGuideLead: '帽子をかぶる位置で頭囲を柔らかいメジャーで測り、下のサイズ表と比べてください。',
+    sizeGuideNote: 'この表を使って fitted サイズを見つけてください。',
+    contactEyebrow: '最新情報を受け取る',
+    contactTitle: 'サポートや情報が必要ですか？ それともアップデート、クーポン、割引情報を受け取りたいですか？',
+    contactLead: 'メールを送るか、メーリングリストに参加してください。',
+    contactButton: 'メーリングリストに参加',
+    footerTitle: 'また会いましょう！',
+    footerBackTop: 'トップへ ↑',
+    entryTitle: 'El Cachuchónへようこそ',
+    entryLead: 'まず fitted サイズを選ぶか、全コレクションをご覧ください。',
+    entryShopBySize: 'サイズで探す',
+    entryBrowseAll: 'すべての帽子を見る',
+    entryMiniLabel: 'fitted サイズを選んでください',
+    shopHeading: '帽子ストア',
+    clearSize: 'サイズフィルターをクリア',
+    sizeGuideTable: ['帽子サイズ', 'インチ', 'CM'],
+    paymentReceived: 'お支払い完了',
+    thankYouTitle: 'ご購入ありがとうございます。',
+    thankYouLead: 'お支払いが完了し、ご注文を処理中です。',
+    keepBrowsing: '引き続き見る',
+    cartTitle: 'ショッピングカート',
+    cartTotal: '合計',
+    checkout: 'チェックアウト'
+  },
+
+  zh: {
+    topbar: '订单满 $100 享受免费标准配送',
+    nav: ['商店', '尺码指南', '关于我们', '联系我们'],
+    heroEyebrow: '高端街头服饰',
+    heroTitle: '你的拼搏。你的骄傲。你的王冠。',
+    heroLead: '高端 fitted 帽款，支持多角度展示与按尺码优先购物。',
+    heroButtons: ['选购系列', '了解品牌'],
+    quickEyebrow: '更快选购',
+    quickTitle: '选择你的 fitted 尺码',
+    sizeGuideEyebrow: '尺码指南',
+    sizeGuideTitle: '找到适合你的 fitted 尺码',
+    sizeGuideLead: '用软尺沿帽子佩戴的位置测量头围，然后对照下方尺码表。',
+    sizeGuideNote: '使用此表找到适合你的 fitted 尺码。',
+    contactEyebrow: '保持联系',
+    contactTitle: '需要帮助、资讯，或想获得更新、优惠券和折扣吗？',
+    contactLead: '给我们发邮件，或加入邮件列表。',
+    contactButton: '加入邮件列表',
+    footerTitle: '下次见，朋友们！',
+    footerBackTop: '返回顶部 ↑',
+    entryTitle: '欢迎来到 El Cachuchón',
+    entryLead: '先选择你的 fitted 尺码，或浏览全部系列。',
+    entryShopBySize: '按尺码选购',
+    entryBrowseAll: '浏览全部帽款',
+    entryMiniLabel: '选择你的 fitted 尺码',
+    shopHeading: '帽款商店',
+    clearSize: '清除尺码筛选',
+    sizeGuideTable: ['帽子尺码', '英寸', '厘米'],
+    paymentReceived: '付款已收到',
+    thankYouTitle: '感谢你的购买。',
+    thankYouLead: '你的付款已完成，我们正在处理你的订单。',
+    keepBrowsing: '继续浏览',
+    cartTitle: '购物车',
+    cartTotal: '总计',
+    checkout: '结账'
+  },
+
+  vi: {
+    topbar: 'Miễn phí giao hàng tiêu chuẩn cho đơn trên $100',
+    nav: ['Cửa hàng', 'Hướng dẫn size', 'Giới thiệu', 'Liên hệ'],
+    heroEyebrow: 'Thời trang đường phố cao cấp',
+    heroTitle: 'Nỗ lực của bạn. Niềm tự hào của bạn. Vương miện của bạn.',
+    heroLead: 'Mũ fitted cao cấp với nhiều góc ảnh và mua sắm dễ dàng theo size trước.',
+    heroButtons: ['Mua bộ sưu tập', 'Về thương hiệu'],
+    quickEyebrow: 'Mua nhanh hơn',
+    quickTitle: 'Chọn size fitted của bạn',
+    sizeGuideEyebrow: 'Hướng dẫn size',
+    sizeGuideTitle: 'Tìm đúng size fitted',
+    sizeGuideLead: 'Dùng thước dây mềm đo quanh đầu tại vị trí đội mũ, rồi đối chiếu với bảng size bên dưới.',
+    sizeGuideNote: 'Dùng bảng này để tìm size fitted phù hợp.',
+    contactEyebrow: 'Luôn cập nhật',
+    contactTitle: 'Cần hỗ trợ, thông tin, hay muốn nhận cập nhật, coupon và giảm giá?',
+    contactLead: 'Hãy email cho chúng tôi hoặc tham gia danh sách thư.',
+    contactButton: 'Tham gia danh sách thư',
+    footerTitle: 'Hẹn gặp lại nhé!',
+    footerBackTop: 'Lên đầu trang ↑',
+    entryTitle: 'Chào mừng đến với El Cachuchón',
+    entryLead: 'Hãy chọn size fitted trước hoặc xem toàn bộ bộ sưu tập.',
+    entryShopBySize: 'Mua theo size',
+    entryBrowseAll: 'Xem tất cả mũ',
+    entryMiniLabel: 'Chọn size fitted của bạn',
+    shopHeading: 'Cửa hàng mũ',
+    clearSize: 'Xóa bộ lọc size',
+    sizeGuideTable: ['Size mũ', 'IN', 'CM'],
+    paymentReceived: 'Đã nhận thanh toán',
+    thankYouTitle: 'Cảm ơn bạn đã mua hàng.',
+    thankYouLead: 'Thanh toán của bạn đã hoàn tất và đơn hàng đang được xử lý.',
+    keepBrowsing: 'Tiếp tục xem',
+    cartTitle: 'Giỏ hàng',
+    cartTotal: 'Tổng cộng',
+    checkout: 'Thanh toán'
+  },
+
+  ko: {
+    topbar: '$100 이상 주문 시 일반 배송 무료',
+    nav: ['쇼핑', '사이즈 가이드', '브랜드 소개', '문의'],
+    heroEyebrow: '프리미엄 스트리트웨어',
+    heroTitle: '당신의 노력. 당신의 자부심. 당신의 왕관.',
+    heroLead: '다양한 각도의 이미지와 쉬운 사이즈 우선 쇼핑을 지원하는 프리미엄 fitted 모자.',
+    heroButtons: ['컬렉션 쇼핑', '브랜드 소개'],
+    quickEyebrow: '더 빠르게 쇼핑',
+    quickTitle: '맞는 fitted 사이즈를 선택하세요',
+    sizeGuideEyebrow: '사이즈 가이드',
+    sizeGuideTitle: '알맞은 fitted 사이즈 찾기',
+    sizeGuideLead: '모자가 놓이는 위치에 맞춰 줄자로 머리 둘레를 측정한 뒤 아래 표와 비교하세요.',
+    sizeGuideNote: '이 표를 사용해 알맞은 fitted 사이즈를 찾으세요.',
+    contactEyebrow: '최신 소식 받기',
+    contactTitle: '도움이나 정보가 필요하거나 업데이트, 쿠폰, 할인 소식을 받고 싶으신가요?',
+    contactLead: '이메일을 보내시거나 메일링 리스트에 가입하세요.',
+    contactButton: '메일링 리스트 가입',
+    footerTitle: '다음에 또 만나요, 여러분!',
+    footerBackTop: '맨 위로 ↑',
+    entryTitle: 'El Cachuchón에 오신 것을 환영합니다',
+    entryLead: '먼저 fitted 사이즈를 선택하거나 전체 컬렉션을 둘러보세요.',
+    entryShopBySize: '사이즈별 쇼핑',
+    entryBrowseAll: '모든 모자 보기',
+    entryMiniLabel: 'fitted 사이즈를 선택하세요',
+    shopHeading: '모자 스토어',
+    clearSize: '사이즈 필터 지우기',
+    sizeGuideTable: ['모자 사이즈', '인치', '센티미터'],
+    paymentReceived: '결제 완료',
+    thankYouTitle: '구매해 주셔서 감사합니다.',
+    thankYouLead: '결제가 완료되었으며 주문을 처리 중입니다.',
+    keepBrowsing: '계속 둘러보기',
+    cartTitle: '장바구니',
+    cartTotal: '합계',
+    checkout: '결제하기'
+  }
+};
+
+function applyLanguage(lang) {
+  const t = TRANSLATIONS[lang];
+  if (!t) return;
+
+  const ticker = document.querySelector('.ticker');
+  if (ticker) ticker.textContent = t.topbar;
+
+  const navLinks = document.querySelectorAll('.site-nav a');
+  navLinks.forEach((link, index) => {
+    if (t.nav[index]) link.textContent = t.nav[index];
+  });
+
+  const heroEyebrow = document.querySelector('.hero-copy .eyebrow');
+  const heroTitle = document.querySelector('.hero-copy h2');
+  const heroLead = document.querySelector('.hero-copy .lead');
+  const heroBtns = document.querySelectorAll('.hero-actions a');
+  if (heroEyebrow) heroEyebrow.textContent = t.heroEyebrow;
+  if (heroTitle) heroTitle.textContent = t.heroTitle;
+  if (heroLead) heroLead.textContent = t.heroLead;
+  if (heroBtns[0]) heroBtns[0].textContent = t.heroButtons[0];
+  if (heroBtns[1]) heroBtns[1].textContent = t.heroButtons[1];
+
+  const quickEyebrow = document.querySelector('.quick-filter .eyebrow');
+  const quickTitle = document.querySelector('.quick-filter h3');
+  if (quickEyebrow) quickEyebrow.textContent = t.quickEyebrow;
+  if (quickTitle) quickTitle.textContent = t.quickTitle;
+
+  const sizeGuideEyebrow = document.querySelector('.size-guide-section .eyebrow');
+  const sizeGuideTitle = document.querySelector('.size-guide-section h2');
+  const sizeGuideLead = document.querySelector('.size-guide-section .lead');
+  const sizeGuideNote = document.querySelector('.size-guide-note');
+  if (sizeGuideEyebrow) sizeGuideEyebrow.textContent = t.sizeGuideEyebrow;
+  if (sizeGuideTitle) sizeGuideTitle.textContent = t.sizeGuideTitle;
+  if (sizeGuideLead) sizeGuideLead.textContent = t.sizeGuideLead;
+  if (sizeGuideNote) sizeGuideNote.textContent = t.sizeGuideNote;
+
+  const sizeTableHeads = document.querySelectorAll('.size-table thead th');
+  sizeTableHeads.forEach((th, index) => {
+    if (t.sizeGuideTable[index]) th.textContent = t.sizeGuideTable[index];
+  });
+
+  const contactEyebrow = document.querySelector('.contact-card .eyebrow');
+  const contactTitle = document.querySelector('.contact-card h2');
+  const contactLead = document.querySelector('.contact-card .lead');
+  const contactButton = document.querySelector('#generalSignupForm button');
+  if (contactEyebrow) contactEyebrow.textContent = t.contactEyebrow;
+  if (contactTitle) contactTitle.textContent = t.contactTitle;
+  if (contactLead) contactLead.textContent = t.contactLead;
+  if (contactButton) contactButton.textContent = t.contactButton;
+
+  const footerTitle = document.querySelector('.site-footer strong');
+  const backToTopBtn = document.getElementById('backToTopBtn');
+  if (footerTitle) footerTitle.textContent = t.footerTitle;
+  if (backToTopBtn) backToTopBtn.textContent = t.footerBackTop;
+
+  const entryTitle = document.querySelector('.size-entry h1');
+  const entryLead = document.querySelector('.size-entry .lead');
+  const openSizePicker = document.getElementById('openSizePicker');
+  const browseAllBtn = document.getElementById('browseAllBtn');
+  const entryMiniLabel = document.querySelector('.entry-size-picker .mini-label');
+  if (entryTitle) entryTitle.textContent = t.entryTitle;
+  if (entryLead) entryLead.textContent = t.entryLead;
+  if (openSizePicker) openSizePicker.textContent = t.entryShopBySize;
+  if (browseAllBtn) browseAllBtn.textContent = t.entryBrowseAll;
+  if (entryMiniLabel) entryMiniLabel.textContent = t.entryMiniLabel;
+
+  const shopHeading = document.querySelector('#shop .section-heading h2');
+  const clearSizeBtn = document.getElementById('clearSizeBtn');
+  if (shopHeading) shopHeading.textContent = t.shopHeading;
+  if (clearSizeBtn) clearSizeBtn.textContent = t.clearSize;
+
+  const cartTitle = document.querySelector('.cart-header h3');
+  const cartTotalLabel = document.querySelector('.cart-total-row span');
+  const checkoutBtn = document.getElementById('checkoutBtn');
+  if (cartTitle) cartTitle.textContent = t.cartTitle;
+  if (cartTotalLabel) cartTotalLabel.textContent = t.cartTotal;
+  if (checkoutBtn) checkoutBtn.textContent = t.checkout;
+
+  const thankYouEyebrow = document.querySelector('#thankYouModal .eyebrow');
+  const thankYouTitle = document.querySelector('#thankYouModal h3');
+  const thankYouLead = document.querySelector('#thankYouModal p:not(.eyebrow)');
+  const keepBrowsingBtn = document.querySelector('.thankyou-actions .btn');
+  if (thankYouEyebrow) thankYouEyebrow.textContent = t.paymentReceived;
+  if (thankYouTitle) thankYouTitle.textContent = t.thankYouTitle;
+  if (thankYouLead) thankYouLead.textContent = t.thankYouLead;
+  if (keepBrowsingBtn) keepBrowsingBtn.textContent = t.keepBrowsing;
+
+  document.documentElement.lang = lang;
+  localStorage.setItem('elCachuchonLang', lang);
+
+  const languageToggleBtn = document.getElementById('languageToggleBtn');
+  if (languageToggleBtn) {
+    const labelMap = {
+      en: 'Language Options',
+      es: 'Idioma',
+      tl: 'Wika',
+      ja: '言語',
+      zh: '语言',
+      vi: 'Ngôn ngữ',
+      ko: '언어'
+    };
+    languageToggleBtn.textContent = labelMap[lang] || 'Language Options';
+  }
+}
+
+function setupLanguageSwitcher() {
+  const toggleBtn = document.getElementById('languageToggleBtn');
+  const dropdown = document.getElementById('languageDropdown');
+  const items = document.querySelectorAll('.lang-dropdown-item');
+
+  if (!toggleBtn || !dropdown || !items.length) return;
+
+  toggleBtn.addEventListener('click', (event) => {
+    event.stopPropagation();
+    dropdown.classList.toggle('hidden');
+  });
+
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      const lang = item.dataset.lang;
+      applyLanguage(lang);
+      dropdown.classList.add('hidden');
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!dropdown.contains(event.target) && event.target !== toggleBtn) {
+      dropdown.classList.add('hidden');
+    }
+  });
+
+  const savedLang = localStorage.getItem('elCachuchonLang') || 'en';
+  applyLanguage(savedLang);
+}
+
+setupLanguageSwitcher();
