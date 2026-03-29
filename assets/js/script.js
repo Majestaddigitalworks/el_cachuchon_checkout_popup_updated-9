@@ -618,57 +618,43 @@ function setupGlobalEvents() {
   document.getElementById('openCartBtn').addEventListener('click', openCart);
   document.getElementById('closeCartBtn').addEventListener('click', closeCart);
   drawerBackdrop.addEventListener('click', closeCart);
-
   document.querySelectorAll('[data-close-modal]').forEach(el => el.addEventListener('click', closeModal));
   document.querySelectorAll('[data-close-thanks]').forEach(el => el.addEventListener('click', closeThanks));
-
   document.getElementById('checkoutBtn').addEventListener('click', () => {
     if (!state.cart.length) {
       showToast('Your cart is empty for now.');
       return;
     }
     if (!paypalClientReady()) {
-      showToast('Add your PayPal Client ID in assets/js/store-config.js first.');
+      showToast('Add your PayPal Client ID in store-config.js first.');
       return;
     }
     showToast('Use the PayPal button below to finish checkout.');
     renderPayPalArea();
   });
-
   const clearSizeBtn = document.getElementById('clearSizeBtn');
   if (clearSizeBtn) clearSizeBtn.addEventListener('click', () => setSizeFilter('All'));
-
   const clearTeamBtn = document.getElementById('clearTeamBtn');
   if (clearTeamBtn) clearTeamBtn.addEventListener('click', () => setTeamFilter('All'));
-
   const clearFiltersBtn = document.getElementById('clearFiltersBtn');
-  if (clearFiltersBtn) {
-    clearFiltersBtn.addEventListener('click', () => {
-      setSizeFilter('All');
-      setTeamFilter('All');
-      if (productSearch) productSearch.value = '';
-      setSearchQuery('');
-    });
-  }
-
-  if (productSearch) {
-    productSearch.addEventListener('input', (event) => setSearchQuery(event.target.value));
-  }
-
+  if (clearFiltersBtn) clearFiltersBtn.addEventListener('click', () => {
+    setSizeFilter('All');
+    setTeamFilter('All');
+    if (productSearch) productSearch.value = '';
+    setSearchQuery('');
+  });
+  if (productSearch) productSearch.addEventListener('input', (event) => setSearchQuery(event.target.value));
   document.getElementById('sizeFilterBtn').addEventListener('click', () => {
     document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
   });
-
   document.getElementById('mobileMenuToggle').addEventListener('click', () => {
     document.getElementById('siteNav').classList.toggle('is-open');
   });
-
   document.getElementById('generalSignupForm').addEventListener('submit', (event) => {
     event.preventDefault();
     showToast('Email captured. Ready to connect to a live email service.');
     event.target.reset();
   });
-
   const backToTopBtn = document.getElementById('backToTopBtn');
   if (backToTopBtn) {
     backToTopBtn.addEventListener('click', (event) => {
@@ -676,120 +662,6 @@ function setupGlobalEvents() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
-}
-
-const TRANSLATIONS = {
-  en: {
-    topbar: 'Free standard shipping on orders over $100',
-    nav: ['Shop', 'Size Guide', 'About', 'Contact'],
-    heroEyebrow: 'Luxury streetwear',
-    heroTitle: 'Your grind. Your pride. Your crown.',
-    heroLead: 'Premium fitted hats with multiple angles and easy size-first shopping.',
-    heroButtons: ['Shop the Collection', 'About the Brand'],
-    quickEyebrow: 'Shop faster',
-    quickTitle: 'Choose your fitted size',
-    sizeGuideEyebrow: 'Size guide',
-    sizeGuideTitle: 'Find the right fitted size',
-    sizeGuideLead: 'Use a flexible tape measure around your head where the cap sits. Match that measurement to the fitted size chart below.',
-    sizeGuideNote: 'Use this chart to find your fitted size.',
-    contactEyebrow: 'Stay in the loop',
-    contactTitle: 'Need help, info, or just want launch updates, coupons, and discounts?',
-    contactLead: 'Email us or join the mailing list.',
-    contactButton: 'Join the Mailing List',
-    footerTitle: 'Hasta la próxima plebes!',
-    footerBackTop: 'Back to top ↑'
-  },
-  es: {
-    topbar: 'Envío estándar gratis en pedidos de más de $100',
-    nav: ['Tienda', 'Guía de Tallas', 'Nosotros', 'Contacto'],
-    heroEyebrow: 'Streetwear de lujo',
-    heroTitle: 'Tu esfuerzo. Tu orgullo. Tu corona.',
-    heroLead: 'Gorras fitted premium con múltiples ángulos y compra fácil por talla.',
-    heroButtons: ['Comprar la Colección', 'Sobre la Marca'],
-    quickEyebrow: 'Compra más rápido',
-    quickTitle: 'Elige tu talla fitted',
-    sizeGuideEyebrow: 'Guía de tallas',
-    sizeGuideTitle: 'Encuentra la talla fitted correcta',
-    sizeGuideLead: 'Usa una cinta flexible alrededor de tu cabeza donde se acomoda la gorra. Luego compárala con la tabla de tallas.',
-    sizeGuideNote: 'Usa esta tabla para encontrar tu talla fitted.',
-    contactEyebrow: 'Mantente al tanto',
-    contactTitle: '¿Necesitas ayuda, información o quieres actualizaciones, cupones y descuentos?',
-    contactLead: 'Escríbenos o únete a la lista de correos.',
-    contactButton: 'Únete a la lista',
-    footerTitle: '¡Hasta la próxima plebes!',
-    footerBackTop: 'Volver arriba ↑'
-  }
-};
-
-function applyLanguage(lang) {
-  const t = TRANSLATIONS[lang];
-  if (!t) return;
-
-  const ticker = document.querySelector('.ticker');
-  if (ticker) ticker.textContent = t.topbar;
-
-  const navLinks = document.querySelectorAll('.site-nav a');
-  navLinks.forEach((link, index) => {
-    if (t.nav[index]) link.textContent = t.nav[index];
-  });
-
-  const heroEyebrow = document.querySelector('.hero-copy .eyebrow');
-  const heroTitle = document.querySelector('.hero-copy h2');
-  const heroLead = document.querySelector('.hero-copy .lead');
-  const heroBtns = document.querySelectorAll('.hero-actions a');
-
-  if (heroEyebrow) heroEyebrow.textContent = t.heroEyebrow;
-  if (heroTitle) heroTitle.textContent = t.heroTitle;
-  if (heroLead) heroLead.textContent = t.heroLead;
-  if (heroBtns[0]) heroBtns[0].textContent = t.heroButtons[0];
-  if (heroBtns[1]) heroBtns[1].textContent = t.heroButtons[1];
-
-  const quickEyebrow = document.querySelector('.quick-filter .eyebrow');
-  const quickTitle = document.querySelector('.quick-filter h3');
-  if (quickEyebrow) quickEyebrow.textContent = t.quickEyebrow;
-  if (quickTitle) quickTitle.textContent = t.quickTitle;
-
-  const sizeGuideEyebrow = document.querySelector('.size-guide-section .eyebrow');
-  const sizeGuideTitle = document.querySelector('.size-guide-section h2');
-  const sizeGuideLead = document.querySelector('.size-guide-section .lead');
-  const sizeGuideNote = document.querySelector('.size-guide-note');
-  if (sizeGuideEyebrow) sizeGuideEyebrow.textContent = t.sizeGuideEyebrow;
-  if (sizeGuideTitle) sizeGuideTitle.textContent = t.sizeGuideTitle;
-  if (sizeGuideLead) sizeGuideLead.textContent = t.sizeGuideLead;
-  if (sizeGuideNote) sizeGuideNote.textContent = t.sizeGuideNote;
-
-  const contactEyebrow = document.querySelector('.contact-card .eyebrow');
-  const contactTitle = document.querySelector('.contact-card h2');
-  const contactLead = document.querySelector('.contact-card .lead');
-  const contactButton = document.querySelector('#generalSignupForm button');
-  if (contactEyebrow) contactEyebrow.textContent = t.contactEyebrow;
-  if (contactTitle) contactTitle.textContent = t.contactTitle;
-  if (contactLead) contactLead.textContent = t.contactLead;
-  if (contactButton) contactButton.textContent = t.contactButton;
-
-  const footerTitle = document.querySelector('.site-footer strong');
-  const backToTopBtn = document.getElementById('backToTopBtn');
-  if (footerTitle) footerTitle.textContent = t.footerTitle;
-  if (backToTopBtn) backToTopBtn.textContent = t.footerBackTop;
-
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
-  });
-
-  localStorage.setItem('elCachuchonLang', lang);
-  document.documentElement.setAttribute('lang', lang);
-}
-
-function setupLanguageSwitcher() {
-  const buttons = document.querySelectorAll('.lang-btn');
-  if (!buttons.length) return;
-
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
-  });
-
-  const savedLang = localStorage.getItem('elCachuchonLang') || 'en';
-  applyLanguage(savedLang);
 }
 
 renderSizeChips(document.getElementById('headerSizeGrid'), setSizeFilter, 'All');
@@ -800,4 +672,3 @@ setSizeFilter('All');
 renderCart();
 setupEntryExperience();
 setupGlobalEvents();
-setupLanguageSwitcher();
