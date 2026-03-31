@@ -447,7 +447,36 @@ window.EL_CACHUCHON_PRODUCTS = [
       "Photos": "5 angles included"
     }
   },
-  
+  {
+    "id": "new-era-houston-vintage-wine-astros",
+    "folder": "New_Era_Houston_Vintage_Wine_Astros",
+    "name": "New Era Houston Vintage Wine Astros",
+    "shortName": "Houston Vintage Wine Astros",
+    "price": 60,
+    "badge": "Premium fitted",
+    "frontImage": "assets/img/Merch/New_Era_Houston_Vintage_Wine_Astros/New_Era_Houston_Vintage_Wine_Astros_FRONT.jpg",
+    "gallery": [
+      "assets/img/Merch/New_Era_Houston_Vintage_Wine_Astros/New_Era_Houston_Vintage_Wine_Astros_FRONT.jpg",
+      "assets/img/Merch/New_Era_Houston_Vintage_Wine_Astros/New_Era_Houston_Vintage_Wine_Astros_LEFTSIDE.jpg",
+      "assets/img/Merch/New_Era_Houston_Vintage_Wine_Astros/New_Era_Houston_Vintage_Wine_Astros_BACK.jpg",
+      "assets/img/Merch/New_Era_Houston_Vintage_Wine_Astros/New_Era_Houston_Vintage_Wine_Astros_BOTTOM.jpg",
+      "assets/img/Merch/New_Era_Houston_Vintage_Wine_Astros/New_Era_Houston_Vintage_Wine_Astros_RIGHTSIDE.jpg"
+    ],
+    "imageFiles": [
+      "New_Era_Houston_Vintage_Wine_Astros_FRONT.jpg",
+      "New_Era_Houston_Vintage_Wine_Astros_LEFTSIDE.jpg",
+      "New_Era_Houston_Vintage_Wine_Astros_BACK.jpg",
+      "New_Era_Houston_Vintage_Wine_Astros_BOTTOM.jpg",
+      "New_Era_Houston_Vintage_Wine_Astros_RIGHTSIDE.jpg"
+    ],
+    "description": "Houston Vintage Wine Astros premium fitted hat with multi-angle product photos.",
+    "details": {
+      "Style": "59FIFTY inspired fitted",
+      "Collection": "Houston Vintage Wine Astros",
+      "Team": "Astros",
+      "Photos": "5 angles included"
+    }
+  },
   {
     "id": "new-era-los-angeles-flower-power-dodgers",
     "folder": "New_Era_Los Angeles_Flower_Power_Dodgers",
