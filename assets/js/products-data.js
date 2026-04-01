@@ -956,34 +956,7 @@ window.EL_CACHUCHON_PRODUCTS = [
       "Photos": "5 angles included"
     }
   },
-  {
-    "id": "new-era-red-supreme",
-    "folder": "New_Era_Red_Supreme",
-    "name": "New Era Red Supreme",
-    "shortName": "Red Supreme",
-    "price": 60,
-    "badge": "Premium fitted",
-    "frontImage": "assets/img/Merch/New_Era_Red_Supreme/New_Era_Red_Supreme_FRONT.jpeg",
-    "gallery": [
-      "assets/img/Merch/New_Era_Red_Supreme/New_Era_Red_Supreme_FRONT.jpeg",
-      "assets/img/Merch/New_Era_Red_Supreme/New_Era_Red_Supreme_LEFT_SIDE.jpeg",
-      "assets/img/Merch/New_Era_Red_Supreme/New_Era_Red_Supreme_BACK.jpeg",
-      "assets/img/Merch/New_Era_Red_Supreme/New_Era_Red_Supreme_BOTTOM.jpeg"
-    ],
-    "imageFiles": [
-      "New_Era_Red_Supreme_FRONT.jpeg",
-      "New_Era_Red_Supreme_LEFT_SIDE.jpeg",
-      "New_Era_Red_Supreme_BACK.jpeg",
-      "New_Era_Red_Supreme_BOTTOM.jpeg"
-    ],
-    "description": "Red Supreme premium fitted hat with multi-angle product photos.",
-    "details": {
-      "Style": "59FIFTY inspired fitted",
-      "Collection": "Red Supreme",
-      "Team": "Supreme",
-      "Photos": "4 angles included"
-    }
-  },
+ 
   {
     "id": "new-era-san-francisco-bomb-pop-giants",
     "folder": "New_Era_San_Francisco_Bomb_Pop_Giants",
