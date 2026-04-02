@@ -418,19 +418,9 @@ window.openProduct = function openProduct(productId, openNotify = false) {
   modalDetails.innerHTML = Object.entries(product.details)
     .map(([label, value]) => `<div class="detail-card"><span>${label}</span><strong>${value}</strong></div>`).join('');
 
- renderModalActions(openNotify);
-productModal.classList.add('is-open');
-productModal.setAttribute('aria-hidden', 'false');
-
-const modalDialogEl = productModal.querySelector('.modal-dialog');
-if (modalDialogEl) {
-  modalDialogEl.scrollTop = 0;
-}
-
-const modalContentEl = productModal.querySelector('.modal-content');
-if (modalContentEl) {
-  modalContentEl.scrollTop = 0;
-}
+  renderModalActions(openNotify);
+  productModal.classList.add('is-open');
+  productModal.setAttribute('aria-hidden', 'false');
 };
 
 window.changeThumb = function changeThumb(index) {
