@@ -716,3 +716,17 @@ html{scroll-behavior:smooth}
     min-width: 100% !important;
   }
 }
+.brand.brand--logo .brand-logo-img{
+  width: 230px !important;
+  max-width: 230px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+@media (max-width: 760px){
+  .brand.brand--logo .brand-logo-img{
+    width: 175px !important;
+    max-width: 175px !important;
+  }
+}
