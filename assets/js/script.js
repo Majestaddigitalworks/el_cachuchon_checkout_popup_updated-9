@@ -419,8 +419,23 @@ window.openProduct = function openProduct(productId, openNotify = false) {
     .map(([label, value]) => `<div class="detail-card"><span>${label}</span><strong>${value}</strong></div>`).join('');
 
   renderModalActions(openNotify);
-  productModal.classList.add('is-open');
-  productModal.setAttribute('aria-hidden', 'false');
+productModal.classList.add('is-open');
+productModal.setAttribute('aria-hidden', 'false');
+
+const modalDialogEl =
+  productModal.querySelector('.modal-dialog--wide') ||
+  productModal.querySelector('.modal-dialog');
+
+if (modalDialogEl) {
+  modalDialogEl.scrollTop = 0;
+}
+
+const modalContentEl = productModal.querySelector('.modal-content');
+if (modalContentEl) {
+  modalContentEl.scrollTop = 0;
+}
+
+productModal.scrollTop = 0;
 };
 
 window.changeThumb = function changeThumb(index) {
