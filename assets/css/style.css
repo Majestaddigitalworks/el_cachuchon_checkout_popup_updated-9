@@ -730,3 +730,19 @@ html{scroll-behavior:smooth}
     max-width: 175px !important;
   }
 }
+/* ===== ONLY MAKE HEADER LOGO BIGGER ===== */
+.brand.brand--logo .brand-logo-img{
+  width: 250px !important;
+  max-width: 250px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+@media (max-width: 760px){
+  .brand.brand--logo .brand-logo-img{
+    width: 205px !important;
+    max-width: 205px !important;
+  }
+}
