@@ -926,36 +926,7 @@ window.EL_CACHUCHON_PRODUCTS = [
       "Photos": "5 angles included"
     }
   },
-  {
-    "id": "new-era-pittsburgh-treasure-chest-pirates",
-    "folder": "New_Era_Pittsburgh_Treasure_Chest_Pirates",
-    "name": "New Era Pittsburgh Treasure Chest Pirates",
-    "shortName": "Pittsburgh Treasure Chest Pirates",
-    "price": 60,
-    "badge": "Premium fitted",
-    "frontImage": "assets/img/Merch/New_Era_Pittsburgh_Treasure_Chest_Pirates/New_Era_Pittsburgh_Treasure_Chest_Pirates_FRONT.jpg",
-    "gallery": [
-      "assets/img/Merch/New_Era_Pittsburgh_Treasure_Chest_Pirates/New_Era_Pittsburgh_Treasure_Chest_Pirates_FRONT.jpg",
-      "assets/img/Merch/New_Era_Pittsburgh_Treasure_Chest_Pirates/New_Era_Pittsburgh_Treasure_Chest_Pirates_LEFTSIDE.jpg",
-      "assets/img/Merch/New_Era_Pittsburgh_Treasure_Chest_Pirates/New_Era_Pittsburgh_Treasure_Chest_Pirates_BACK.jpg",
-      "assets/img/Merch/New_Era_Pittsburgh_Treasure_Chest_Pirates/New_Era_Pittsburgh_Treasure_Chest_Pirates_BOTTOM.jpg",
-      "assets/img/Merch/New_Era_Pittsburgh_Treasure_Chest_Pirates/New_Era_Pittsburgh_Treasure_Chest_Pirates_RIGHTSIDE.jpg"
-    ],
-    "imageFiles": [
-      "New_Era_Pittsburgh_Treasure_Chest_Pirates_FRONT.jpg",
-      "New_Era_Pittsburgh_Treasure_Chest_Pirates_LEFTSIDE.jpg",
-      "New_Era_Pittsburgh_Treasure_Chest_Pirates_BACK.jpg",
-      "New_Era_Pittsburgh_Treasure_Chest_Pirates_BOTTOM.jpg",
-      "New_Era_Pittsburgh_Treasure_Chest_Pirates_RIGHTSIDE.jpg"
-    ],
-    "description": "Pittsburgh Treasure Chest Pirates premium fitted hat with multi-angle product photos.",
-    "details": {
-      "Style": "59FIFTY",
-      "Collection": "Pittsburgh Treasure Chest Pirates",
-      "Team": "Pirates",
-      "Photos": "5 angles included"
-    }
-  },
+  
   
   {
     "id": "new-era-san-francisco-bomb-pop-giants",
