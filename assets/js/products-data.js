@@ -23,7 +23,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "NEW ERA SANFRANCISCO MIDNIGHT premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "NEW ERA SANFRANCISCO MIDNIGHT",
       "Team": "MIDNIGHT",
       "Photos": "5 angles included"
@@ -53,7 +53,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Atlanta Buttercream Braves premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Atlanta Buttercream Braves",
       "Team": "Braves",
       "Photos": "5 angles included"
@@ -83,7 +83,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Atlanta Skyline Braves premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Atlanta Skyline Braves",
       "Team": "Braves",
       "Photos": "5 angles included"
@@ -113,7 +113,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Baltimore Forest Field Orioles premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Baltimore Forest Field Orioles",
       "Team": "Orioles",
       "Photos": "5 angles included"
@@ -143,7 +143,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Boston Emerald City Red Sox premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Boston Emerald City Red Sox",
       "Team": "Sox",
       "Photos": "5 angles included"
@@ -173,7 +173,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Brooklyn Copper Dodgers premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Brooklyn Copper Dodgers",
       "Team": "Dodgers",
       "Photos": "5 angles included"
@@ -203,7 +203,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Brooklyn Cream Soda Dodgers premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Brooklyn Cream Soda Dodgers",
       "Team": "Dodgers",
       "Photos": "5 angles included"
@@ -233,7 +233,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Brooklyn Killer Bee Dodgers premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Brooklyn Killer Bee Dodgers",
       "Team": "Dodgers",
       "Photos": "5 angles included"
@@ -263,7 +263,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Brooklyn Legend 42 Dodgers premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Brooklyn Legend 42 Dodgers",
       "Team": "Dodgers",
       "Photos": "5 angles included"
@@ -293,7 +293,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Chicago Icy Cubs premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Chicago Icy Cubs",
       "Team": "Cubs",
       "Photos": "5 angles included"
@@ -321,7 +321,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Chicago Sandstorm Cubs premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Chicago Sandstorm Cubs",
       "Team": "Cubs",
       "Photos": "4 angles included"
@@ -351,7 +351,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Chicago Toy Box Cubs premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Chicago Toy Box Cubs",
       "Team": "Cubs",
       "Photos": "5 angles included"
@@ -381,7 +381,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Cleveland Ballpark Indians premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Cleveland Ballpark Indians",
       "Team": "Indians",
       "Photos": "5 angles included"
@@ -411,7 +411,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Houston Bordeaux Astros premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Houston Bordeaux Astros",
       "Team": "Astros",
       "Photos": "5 angles included"
@@ -441,7 +441,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Houston Gunslinger Astros premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Houston Gunslinger Astros",
       "Team": "Astros",
       "Photos": "5 angles included"
@@ -472,7 +472,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Los Angeles Flower Power Dodgers premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Los Angeles Flower Power Dodgers",
       "Team": "Dodgers",
       "Photos": "5 angles included"
@@ -502,7 +502,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Milwaukee Royal Punch Brewers premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Milwaukee Royal Punch Brewers",
       "Team": "Brewers",
       "Photos": "5 angles included"
@@ -532,7 +532,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Minnesota Autumn Twins premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Minnesota Autumn Twins",
       "Team": "Twins",
       "Photos": "5 angles included"
@@ -560,7 +560,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Minnesota Electric City Twins premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Minnesota Electric City Twins",
       "Team": "Twins",
       "Photos": "4 angles included"
@@ -590,7 +590,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "New York Blue Sand Yankees premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "New York Blue Sand Yankees",
       "Team": "Yankees",
       "Photos": "5 angles included"
@@ -620,7 +620,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "New York Golden Harvest Yankees premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "New York Golden Harvest Yankees",
       "Team": "Yankees",
       "Photos": "5 angles included"
@@ -650,7 +650,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "New York Icy Mets premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "New York Icy Mets",
       "Team": "Mets",
       "Photos": "5 angles included"
@@ -680,7 +680,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "New York Midnight Yankees premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "New York Midnight Yankees",
       "Team": "Yankees",
       "Photos": "5 angles included"
@@ -710,7 +710,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "New York Queens Run Mets premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "New York Queens Run Mets",
       "Team": "Mets",
       "Photos": "5 angles included"
@@ -740,7 +740,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "New York Stained Glass Yankees premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "New York Stained Glass Yankees",
       "Team": "Yankees",
       "Photos": "5 angles included"
@@ -770,7 +770,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "New York Vintage Wine Mets premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "New York Vintage Wine Mets",
       "Team": "Mets",
       "Photos": "5 angles included"
@@ -800,7 +800,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Oakland Oakland Nights Athletics premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Oakland Oakland Nights Athletics",
       "Team": "Athletics",
       "Photos": "5 angles included"
@@ -830,7 +830,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Philadelphia After Dark Phillies premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Philadelphia After Dark Phillies",
       "Team": "Phillies",
       "Photos": "5 angles included"
@@ -860,7 +860,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Philadelphia Peanut Butter Phillies premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Philadelphia Peanut Butter Phillies",
       "Team": "Phillies",
       "Photos": "5 angles included"
@@ -890,7 +890,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Philadelphia Valentines Day Massacre Phillies premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Philadelphia Valentines Day Massacre Phillies",
       "Team": "Phillies",
       "Photos": "5 angles included"
@@ -920,7 +920,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Pittsburgh Three Rivers Pirates premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Pittsburgh Three Rivers Pirates",
       "Team": "Pirates",
       "Photos": "5 angles included"
@@ -950,13 +950,40 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Pittsburgh Treasure Chest Pirates premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Pittsburgh Treasure Chest Pirates",
       "Team": "Pirates",
       "Photos": "5 angles included"
     }
   },
- 
+  {
+    "id": "new-era-red-supreme",
+    "folder": "New_Era_Red_Supreme",
+    "name": "New Era Red Supreme",
+    "shortName": "Red Supreme",
+    "price": 60,
+    "badge": "Premium fitted",
+    "frontImage": "assets/img/Merch/New_Era_Red_Supreme/New_Era_Red_Supreme_FRONT.jpeg",
+    "gallery": [
+      "assets/img/Merch/New_Era_Red_Supreme/New_Era_Red_Supreme_FRONT.jpeg",
+      "assets/img/Merch/New_Era_Red_Supreme/New_Era_Red_Supreme_LEFT_SIDE.jpeg",
+      "assets/img/Merch/New_Era_Red_Supreme/New_Era_Red_Supreme_BACK.jpeg",
+      "assets/img/Merch/New_Era_Red_Supreme/New_Era_Red_Supreme_BOTTOM.jpeg"
+    ],
+    "imageFiles": [
+      "New_Era_Red_Supreme_FRONT.jpeg",
+      "New_Era_Red_Supreme_LEFT_SIDE.jpeg",
+      "New_Era_Red_Supreme_BACK.jpeg",
+      "New_Era_Red_Supreme_BOTTOM.jpeg"
+    ],
+    "description": "Red Supreme premium fitted hat with multi-angle product photos.",
+    "details": {
+      "Style": "59FIFTY",
+      "Collection": "Red Supreme",
+      "Team": "Supreme",
+      "Photos": "4 angles included"
+    }
+  },
   {
     "id": "new-era-san-francisco-bomb-pop-giants",
     "folder": "New_Era_San_Francisco_Bomb_Pop_Giants",
@@ -981,7 +1008,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "San Francisco Bomb Pop Giants premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "San Francisco Bomb Pop Giants",
       "Team": "Giants",
       "Photos": "5 angles included"
@@ -1011,7 +1038,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "San Francisco Ocean Storm Giants premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "San Francisco Ocean Storm Giants",
       "Team": "Giants",
       "Photos": "5 angles included"
@@ -1041,7 +1068,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Seattle Voyage Mariners premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Seattle Voyage Mariners",
       "Team": "Mariners",
       "Photos": "5 angles included"
@@ -1071,7 +1098,7 @@ window.EL_CACHUCHON_PRODUCTS = [
     ],
     "description": "Texas Outlaw Rangers premium fitted hat with multi-angle product photos.",
     "details": {
-      "Style": "59FIFTY inspired fitted",
+      "Style": "59FIFTY",
       "Collection": "Texas Outlaw Rangers",
       "Team": "Rangers",
       "Photos": "5 angles included"
